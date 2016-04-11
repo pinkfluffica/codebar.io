@@ -4,18 +4,17 @@ console.log('hello world');
 
 
 function hello(person) {
-	console.log ("Hello " +person+"!");
+	console.log (greeting (person));
 }
 
-function conversation(person) {
-	hello ();
+function conversation(person, topic) {
+	hello (person);
 	console.log ("How are you?");
 	console.log ("Goodbye");
+	console.log ("Do you like " + topic + "?")
 } 
 
 // This (above) doesn't work fully!!
-
-
 
 
 // This is a function with a return
@@ -25,8 +24,23 @@ function greeting(person) {
 	return 'Hello ' + person + '!';
 }
 
-// Now I'm supposed to call the function in side the function named hello, 
-// but I'm not sure of the syntax
 
-// And then check that conversation still works
-// But it never did!
+
+var person_a = {
+	first_name: "Jessica",
+	likes: "Owls",
+};
+
+var person_b = person_a;
+
+console.log("Before");
+console.log(person_a.first_name);
+console.log(person_b.first_name);
+
+person_a.first_name = "Poopy";
+
+console.log("After");
+console.log(person_a.first_name);
+console.log(person_b.first_name);
+
+
